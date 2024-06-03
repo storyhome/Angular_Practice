@@ -199,6 +199,12 @@ export class CatalogComponent {
     ];   
   }
 
+  getDiscountedClasses(product: IProduct){
+    // return {strickethrough: product.discount > 0};
+    if (product.discount > 0) return ['strikethrough']
+    else return [];  
+  }
+
    getImageUrl(product: IProduct){
     return '/assets/images/robot-parts/' + product.imageName;
   }
